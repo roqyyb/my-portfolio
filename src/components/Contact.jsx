@@ -7,7 +7,11 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+import { toast } from "react-toastify";
+
 const Contact = () => {
+  const notify = (message) => toast.success(message);
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -47,7 +51,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          notify("Thank you. I will get back to you as soon as possible.");
 
           setForm({
             name: "",
