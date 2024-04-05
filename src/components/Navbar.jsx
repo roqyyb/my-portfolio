@@ -24,7 +24,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white font-bold text-[18px] cursor-pointer">
-            Roqeeb
+            ROQYYB
           </p>
         </Link>
         <ul className="list-none hidden  sm:flex flex-row gap-10 ">
@@ -36,7 +36,7 @@ const Navbar = () => {
               } `}
               onClick={() => setActive(link.title)}
             >
-              <Link to={`/${link.id}`}>{link.title}</Link>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
@@ -64,7 +64,7 @@ const Navbar = () => {
                     setToggle(!toggle);
                   }}
                 >
-                  <Link to={`/${link.id}`}>{link.title}</Link>
+                  <a href={`/${link.id}`}>{link.title}</a>
                 </li>
               ))}
             </ul>
